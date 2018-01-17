@@ -11,6 +11,9 @@ A React component that uses the awesome [abc2js](https://github.com/paulrosen/ab
 ```js
 <Abcjs
   abcNotation={'X:1\nT:Example\nM:4/4\nC:Trad.\nK:G\n|:Gccc dedB|dedB dedB|c2ec B2dB|c2A2 A2BA|'}
+  parserParams={{}}
+  engraverParams={{ responsive: 'resize' }}
+  renderParams={{ viewportHorizontal: true }}
 />
 ```
 
