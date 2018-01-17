@@ -8,5 +8,8 @@ module.exports = {
         react: 'React'
       }
     }
+  },
+  karma: {
+    testContext: 'tests.webpack.js'
   }
 }
