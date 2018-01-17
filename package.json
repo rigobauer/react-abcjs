@@ -19,7 +19,7 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "abcjs": "^3.3.0",
+    "abcjs": "^3.3.1",
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
@@ -32,7 +32,7 @@
     "nwb": "0.21.x",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "sinon": "^4.1.5"
+    "sinon": "^4.1.6"
   },
   "author": "Alberto Iglesias",
   "homepage": "",
