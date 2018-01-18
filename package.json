@@ -1,6 +1,6 @@
 {
   "name": "react-abcjs",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "react-abcjs React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -16,7 +16,10 @@
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once",
+    "cm": "git-cz"
   },
   "dependencies": {
     "abcjs": "^3.3.1",
@@ -27,18 +30,30 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "nwb": "0.21.x",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "sinon": "^4.1.6"
+    "semantic-release": "^12.2.2",
+    "sinon": "^4.1.6",
+    "travis-deploy-once": "^4.3.2"
   },
   "author": "Alberto Iglesias",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rigobauer/react-abcjs.git"
+  },
   "keywords": [
     "react-component"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
