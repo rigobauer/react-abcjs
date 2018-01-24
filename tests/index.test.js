@@ -9,8 +9,9 @@ describe('Abcjs', () => {
 
   it('shallow renders <Abcjs /> with default parameters', () => {
     const wrapper = shallow(<Abcjs />)
+    const id = wrapper.find('div').at(1).prop('id')
     expect(wrapper.html())
-      .to.equal('<div style="width:100%"><div id="abcjs-result" style="width:100%"></div></div>')
+      .to.equal(`<div style="width:100%"><div id="${id}" style="width:100%"></div></div>`)
   })
 
   it('mounts <Abcjs /> with a simple abcNotation', () => {

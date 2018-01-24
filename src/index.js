@@ -5,9 +5,11 @@ import abcjsObj from 'abcjs'
 
 class Abcjs extends PureComponent {
 
+  uniqueNumber = Date.now() + Math.random()
+
   renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams) {
     const res = abcjsObj.renderAbc(
-      'abcjs-result',
+      'abcjs-result-' + this.uniqueNumber,
       abcNotation,
       parserParams,
       engraverParams,
@@ -28,7 +30,7 @@ class Abcjs extends PureComponent {
   render() {
     return (
       <div style={{ width: '100%' }} >
-        <div id="abcjs-result" style={{ width: '100%' }} />
+        <div id={'abcjs-result-' + this.uniqueNumber} style={{ width: '100%' }} />
       </div>
     )
   }
