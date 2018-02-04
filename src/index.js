@@ -2,9 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import abcjsObj from 'abcjs'
 
-
 class Abcjs extends PureComponent {
-
   uniqueNumber = Date.now() + Math.random()
 
   renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams) {
@@ -18,23 +16,45 @@ class Abcjs extends PureComponent {
   }
 
   componentDidMount() {
-    const { abcNotation, parserParams, engraverParams, renderParams } = this.props
-    this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { abcNotation, parserParams, engraverParams, renderParams } = nextProps
-    this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
-  }
-  
-  render() {
-    return (
-      <div style={{ width: '100%' }} >
-        <div id={'abcjs-result-' + this.uniqueNumber} style={{ width: '100%' }} />
-      </div>
+    const {
+      abcNotation,
+      parserParams,
+      engraverParams,
+      renderParams
+    } = this.props
+    this.renderAbcNotation(
+      abcNotation,
+      parserParams,
+      engraverParams,
+      renderParams
     )
   }
 
+  componentWillReceiveProps(nextProps) {
+    const {
+      abcNotation,
+      parserParams,
+      engraverParams,
+      renderParams
+    } = nextProps
+    this.renderAbcNotation(
+      abcNotation,
+      parserParams,
+      engraverParams,
+      renderParams
+    )
+  }
+
+  render() {
+    return (
+      <div style={{ width: '100%' }}>
+        <div
+          id={'abcjs-result-' + this.uniqueNumber}
+          style={{ width: '100%' }}
+        />
+      </div>
+    )
+  }
 }
 
 Abcjs.propTypes = {

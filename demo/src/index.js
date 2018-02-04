@@ -13,12 +13,18 @@ class Demo extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        abcNotation: 'X:1\nT:Test\nM:4/4\nC:Trad.\nK:G\n|:GcAB dedB|dedB dedB|c2ec B2dB|c2A2 A2BA|'
+        abcNotation:
+          'X:1\nT:Test\nM:4/4\nC:Trad.\nK:G\n|:GcAB dedB|dedB dedB|c2ec B2dB|c2A2 A2BA|'
       })
     }, 5000)
   }
   render() {
-    const { abcNotation, parserParams, engraverParams, renderParams } = this.state
+    const {
+      abcNotation,
+      parserParams,
+      engraverParams,
+      renderParams
+    } = this.state
     return (
       <div style={{ border: '1px solid black', padding: '100px' }}>
         <Abcjs
@@ -32,4 +38,4 @@ class Demo extends Component {
   }
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo />, document.querySelector('#demo'))
