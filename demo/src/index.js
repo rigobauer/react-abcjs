@@ -10,6 +10,7 @@ class Demo extends Component {
     engraverParams: { responsive: 'resize' },
     renderParams: { viewportHorizontal: true }
   }
+
   componentDidMount() {
     setTimeout(() => {
       this.setState({
@@ -18,6 +19,7 @@ class Demo extends Component {
       })
     }, 5000)
   }
+
   render() {
     const {
       abcNotation,
@@ -25,6 +27,7 @@ class Demo extends Component {
       engraverParams,
       renderParams
     } = this.state
+
     return (
       <div style={{ border: '1px solid black', padding: '100px' }}>
         <Abcjs
