@@ -1,0 +1,32 @@
+name: test_frontend
+
+on:
+  push:
+    branches:
+    tags:
+    paths-ignore:
+    - '**.md'
+  pull_request:
+    paths-ignore:
+    - '**.md'
+
+jobs:
+  build-and-test:
+    name: Node ${{ matrix.node }} build and test
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [ '13', '10', '8' ]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+
+    - run: npm ci
+
+    - run: npm run test build
