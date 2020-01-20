@@ -4,7 +4,12 @@
   "description": "react-abcjs React component",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "files": ["css", "es", "lib", "umd"],
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
@@ -28,27 +33,27 @@
     ]
   },
   "dependencies": {
-    "abcjs": "^3.3.1",
-    "prop-types": "^15.6.0"
+    "abcjs": "^5.12.0",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.1.0",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "husky": "^0.15.0-rc.3",
-    "lint-staged": "^6.1.0",
-    "nwb": "0.21.x",
-    "prettier": "^1.10.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "semantic-release": "^12.2.2",
-    "sinon": "^4.2.2",
-    "travis-deploy-once": "^4.3.2"
+    "chai": "^4.2.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.1",
+    "nwb": "^0.23.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "semantic-release": "^16.0.2",
+    "sinon": "^8.1.0",
+    "travis-deploy-once": "^5.0.11"
   },
   "author": "Alberto Iglesias",
   "homepage": "",
@@ -57,7 +62,10 @@
     "type": "git",
     "url": "https://github.com/rigobauer/react-abcjs.git"
   },
-  "keywords": ["react-component", "abcjs"],
+  "keywords": [
+    "react-component",
+    "abcjs"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
