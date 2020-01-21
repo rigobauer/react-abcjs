@@ -16,42 +16,19 @@ class Abcjs extends PureComponent {
   }
 
   componentDidMount() {
-    const {
-      abcNotation,
-      parserParams,
-      engraverParams,
-      renderParams
-    } = this.props
-    this.renderAbcNotation(
-      abcNotation,
-      parserParams,
-      engraverParams,
-      renderParams
-    )
+    const { abcNotation, parserParams, engraverParams, renderParams } = this.props
+    this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
   }
 
   componentWillReceiveProps(nextProps) {
-    const {
-      abcNotation,
-      parserParams,
-      engraverParams,
-      renderParams
-    } = nextProps
-    this.renderAbcNotation(
-      abcNotation,
-      parserParams,
-      engraverParams,
-      renderParams
-    )
+    const { abcNotation, parserParams, engraverParams, renderParams } = nextProps
+    this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
   }
 
   render() {
     return (
       <div style={{ width: '100%' }}>
-        <div
-          id={'abcjs-result-' + this.uniqueNumber}
-          style={{ width: '100%' }}
-        />
+        <div id={'abcjs-result-' + this.uniqueNumber} style={{ width: '100%' }} />
       </div>
     )
   }
@@ -61,14 +38,14 @@ Abcjs.propTypes = {
   abcNotation: PropTypes.string,
   parserParams: PropTypes.object,
   engraverParams: PropTypes.object,
-  renderParams: PropTypes.object
+  renderParams: PropTypes.object,
 }
 
 Abcjs.defaultProps = {
   abcNotation: '',
   parserParams: {},
   engraverParams: { responsive: 'resize' },
-  renderParams: { viewportHorizontal: true }
+  renderParams: { viewportHorizontal: true },
 }
 
 export default Abcjs

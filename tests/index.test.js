@@ -21,9 +21,7 @@ describe('Abcjs', () => {
     sinon.spy(Abcjs.prototype, 'render')
     sinon.spy(Abcjs.prototype, 'componentDidMount')
     sinon.spy(Abcjs.prototype, 'componentWillReceiveProps')
-    const wrapper = mount(
-      <Abcjs abcNotation={'X:1\nT:Test\nM:4/4\nK:G\nAggg'} />
-    )
+    const wrapper = mount(<Abcjs abcNotation={'X:1\nT:Test\nM:4/4\nK:G\nAggg'} />)
     expect(Abcjs.prototype.render.calledOnce).to.equal(true)
     expect(Abcjs.prototype.componentDidMount.calledOnce).to.equal(true)
     wrapper.setProps({ renderParams: { viewportHorizontal: true } })
