@@ -20,11 +20,11 @@ describe('Abcjs', () => {
   it('mounts <Abcjs /> with a simple abcNotation', () => {
     sinon.spy(Abcjs.prototype, 'render')
     sinon.spy(Abcjs.prototype, 'componentDidMount')
-    sinon.spy(Abcjs.prototype, 'componentWillReceiveProps')
+    sinon.spy(Abcjs.prototype, 'componentDidUpdate')
     const wrapper = mount(<Abcjs abcNotation={'X:1\nT:Test\nM:4/4\nK:G\nAggg'} />)
     expect(Abcjs.prototype.render.calledOnce).to.equal(true)
     expect(Abcjs.prototype.componentDidMount.calledOnce).to.equal(true)
     wrapper.setProps({ renderParams: { viewportHorizontal: true } })
-    expect(Abcjs.prototype.componentWillReceiveProps.calledOnce).to.equal(true)
+    expect(Abcjs.prototype.componentDidUpdate.calledOnce).to.equal(true)
   })
 })
