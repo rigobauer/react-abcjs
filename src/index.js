@@ -20,8 +20,8 @@ class Abcjs extends PureComponent {
     this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { abcNotation, parserParams, engraverParams, renderParams } = nextProps
+  componentDidUpdate() {
+    const { abcNotation, parserParams, engraverParams, renderParams } = this.props
     this.renderAbcNotation(abcNotation, parserParams, engraverParams, renderParams)
   }
 
