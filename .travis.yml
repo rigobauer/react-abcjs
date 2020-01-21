@@ -7,15 +7,13 @@ notifications:
   email: false
 node_js:
   - '12'
-  - '10'
-  - '8'
 before_install:
   - npm install codecov.io coveralls
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - npm run build
-  - npm run travis-deploy-once "npm run semantic-release"
+  - npm run semantic-release
 branches:
   only:
     - master
