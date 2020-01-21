@@ -28,8 +28,7 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --print-width 100 --single-quote --trailing-comma es5 --no-semi --write",
-      "git add"
+      "prettier --print-width 100 --single-quote --trailing-comma es5 --no-semi --write"
     ]
   },
   "dependencies": {
