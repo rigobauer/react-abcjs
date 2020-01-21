@@ -6,7 +6,8 @@ cache:
 notifications:
   email: false
 node_js:
-  - '9'
+  - '12'
+  - '10'
   - '8'
 before_install:
   - npm install codecov.io coveralls
